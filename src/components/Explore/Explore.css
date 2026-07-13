@@ -1,0 +1,49 @@
+.explore {
+  padding: 80px 0;
+}
+
+.explore-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.explore-btn {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.explore-btn button {
+  background: #db4444;
+  color: #fff;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+@media (max-width: 992px) {
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .explore-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explore-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

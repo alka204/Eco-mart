@@ -1,0 +1,72 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+/* CSS Variables */
+:root {
+  --primary-color: #db4444;
+  --black: #000000;
+  --white: #ffffff;
+  --text-color: #000000;
+  --secondary-text: #7d8184;
+  --light-bg: #f5f5f5;
+  --border-color: #e5e5e5;
+
+  --font-heading: "Inter", sans-serif;
+  --font-body: "Poppins", sans-serif;
+
+  --transition: 0.3s ease;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: var(--font-body);
+  color: var(--text-color);
+  background: var(--white);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+  font-family: var(--font-heading);
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Bootstrap Container Width */
+.container {
+  max-width: 1170px !important;
+}

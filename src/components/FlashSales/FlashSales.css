@@ -1,0 +1,134 @@
+.flash-sales {
+  margin-top: 90px;
+  margin-bottom: 70px;
+}
+
+.flash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.flash-title-area {
+  display: flex;
+  align-items: flex-end;
+  gap: 80px;
+}
+
+.countdown {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.countdown div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.countdown small {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.countdown h3 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.countdown span {
+  color: #db4444;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.slider-buttons {
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.slider-buttons button {
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 50%;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider-buttons button:hover {
+  background: #db4444;
+  color: #fff;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.view-all-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.view-all-btn button {
+  background: #db4444;
+  color: #fff;
+  border: none;
+  padding: 16px 48px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.view-all-btn button:hover {
+  background: #c53737;
+}
+
+@media (max-width: 992px) {
+  .flash-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .flash-title-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown {
+    gap: 10px;
+  }
+
+  .countdown h3 {
+    font-size: 24px;
+  }
+
+  .slider-buttons {
+    margin-left: 0;
+  }
+}

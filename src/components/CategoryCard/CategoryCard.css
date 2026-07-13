@@ -1,0 +1,39 @@
+.category-card{
+    width:170px;
+    height:145px;
+
+    border:1px solid #ddd;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    border-radius:4px;
+}
+
+.category-icon{
+    font-size:42px;
+    margin-bottom:16px;
+    transition:.3s;
+}
+
+.category-card p{
+    margin:0;
+    font-size:16px;
+    font-weight:500;
+}
+
+.category-card:hover{
+    background:#DB4444;
+    color:#fff;
+    border-color:#DB4444;
+}
+
+.category-card:hover .category-icon{
+    transform:scale(1.1);
+}
