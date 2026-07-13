@@ -24,16 +24,16 @@
   transform: scale(1.08);
 }
 
-/* .discount{
-    position:absolute;
-    top:12px;
-    left:12px;
-    background:#DB4444;
-    color:#fff;
-    padding:4px 10px;
-    font-size:12px;
-    border-radius:4px;
-} */
+.discount {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #db4444;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 4px;
+}
 
 .product-icons {
   position: absolute;

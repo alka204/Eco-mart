@@ -5,15 +5,15 @@ function ProductCard({
   title,
   price,
   oldPrice,
-  // discount,
+  discount,
   rating,
   reviews,
+  showDiscount,
 }) {
   return (
     <div className="product-card">
       <div className="product-image">
-        {/* <span className="discount">-{discount}%</span> */}
-
+        {showDiscount && <span className="discount">-{discount}%</span>}
         <div className="product-icons">
           <button>
             <i className="bi bi-heart"></i>

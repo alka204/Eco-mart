@@ -1,5 +1,5 @@
 import "./FlashSales.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import ProductCard from "../ProductCard/ProductCard";
 
@@ -9,11 +9,23 @@ import monitor from "../../assets/images/monitor.png";
 import chair from "../../assets/images/chair.png";
 
 function FlashSales() {
-  const calculateTimeLeft = () => {
+  const [targetDate] = useState(() => {
     const target = new Date();
     target.setHours(target.getHours() + 72);
+    return target;
+  });
 
-    const difference = target - new Date();
+  const calculateTimeLeft = useCallback(() => {
+    const difference = targetDate - new Date();
+
+    if (difference <= 0) {
+      return {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0,
+      };
+    }
 
     return {
       days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -21,7 +33,7 @@ function FlashSales() {
       minutes: Math.floor((difference / (1000 * 60)) % 60),
       seconds: Math.floor((difference / 1000) % 60),
     };
-  };
+  }, [targetDate]);
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
@@ -31,8 +43,7 @@ function FlashSales() {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
-
+  }, [calculateTimeLeft]);
   const products = [
     {
       image: gamepad,
@@ -119,8 +130,6 @@ function FlashSales() {
           </div>
         </div>
 
-        {/* Products */}
-
         <div className="products-grid">
           {products.map((product, index) => (
             <ProductCard
@@ -132,6 +141,7 @@ function FlashSales() {
               discount={product.discount}
               rating={product.rating}
               reviews={product.reviews}
+              showDiscount={true}
             />
           ))}
         </div>

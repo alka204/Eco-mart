@@ -7,13 +7,16 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 40px;
 }
 
 .flash-title-area {
   display: flex;
   align-items: flex-end;
   gap: 80px;
+}
+
+.flash-title-area .section-title {
+  margin-bottom: 0;
 }
 
 .countdown {

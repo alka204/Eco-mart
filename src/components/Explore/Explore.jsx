@@ -89,6 +89,7 @@ function Explore() {
               title={product.title}
               price={product.price}
               rating={product.rating}
+              showDiscount={false}
             />
           ))}
         </div>
